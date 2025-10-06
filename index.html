@@ -358,21 +358,21 @@
         
         /* 3D Button Effect for Logo - MADE SMALLER */
         .logo {
-            font-size: 1.6rem; /* Reduced from 1.8rem */
+            font-size: 1.3rem; /* Reduced from 1.6rem */
             font-weight: 700;
             color: var(--white); /* Changed from black to white */
             font-family: 'Noto Kufi Arabic', serif;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px; /* Reduced from 1px */
             margin: 0;
-            padding: 8px 16px; /* Reduced padding */
+            padding: 5px 12px; /* Reduced from 8px 16px */
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Increased shadow for better readability */
             transition: all 0.3s ease;
             background: linear-gradient(145deg, var(--gold), var(--dark-gold));
-            border-radius: 50px;
+            border-radius: 40px; /* Reduced from 50px */
             box-shadow: 
-                0 4px 0 var(--dark-gold),
-                0 6px 8px rgba(0, 0, 0, 0.15),
-                0 2px 0 rgba(255, 255, 255, 0.2) inset;
+                0 3px 0 var(--dark-gold), /* Reduced from 4px */
+                0 4px 6px rgba(0, 0, 0, 0.15), /* Reduced from 6px 8px */
+                0 1px 0 rgba(255, 255, 255, 0.2) inset; /* Reduced from 2px */
             position: relative;
             transform-style: preserve-3d;
             display: inline-block;
@@ -383,7 +383,7 @@
             transform: translateY(2px);
             box-shadow: 
                 0 2px 0 var(--dark-gold),
-                0 4px 6px rgba(0, 0, 0, 0.15),
+                0 3px 5px rgba(0, 0, 0, 0.15),
                 0 1px 0 rgba(255, 255, 255, 0.2) inset;
         }
         
@@ -404,7 +404,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
+            border-radius: 40px;
             z-index: 1;
             animation: whiteEffect 0.5s ease-out;
         }
@@ -2522,8 +2522,9 @@
             }
             
             .logo {
-                font-size: 1.4rem; /* Reduced from 1.5rem */
-                padding: 8px 16px; /* Adjusted for smaller screens */
+                font-size: 1.1rem; /* Reduced from 1.3rem */
+                padding: 4px 10px; /* Reduced from 5px 12px */
+                border-radius: 30px; /* Reduced from 40px */
             }
             
             /* Hero section adjustments */
