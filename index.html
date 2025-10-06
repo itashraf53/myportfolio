@@ -59,6 +59,218 @@
             padding: 0 20px;
         }
         
+        /* 3D Logo Styles */
+        .logo {
+            font-size: 1.8rem; /* Reduced from 2rem */
+            font-weight: 700;
+            color: var(--black);
+            font-family: 'Noto Kufi Arabic', serif;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .logo::before {
+            content: 'محمد اشرف';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, var(--gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transform: translateZ(-20px) scale(0.9);
+            opacity: 0.7;
+            filter: blur(1px);
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+        
+        .logo::after {
+            content: 'محمد اشرف';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 100%;
+            height: 100%;
+            color: var(--white);
+            transform: translateZ(10px);
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+        }
+        
+        .logo:hover::before {
+            transform: translateZ(-30px) scale(0.85);
+            opacity: 0.9;
+        }
+        
+        .logo:hover::after {
+            transform: translateZ(15px) scale(1.02);
+        }
+        
+        /* Enhanced Mobile Toggle Button with 3D Effect */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25px; /* Reduced from 30px */
+            height: 18px; /* Reduced from 21px */
+            cursor: pointer;
+            z-index: 1100;
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .mobile-toggle:hover {
+            transform: rotateY(15deg) scale(1.1);
+        }
+        
+        .mobile-toggle span {
+            display: block;
+            height: 2px; /* Reduced from 3px */
+            width: 100%;
+            background-color: var(--black);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+            position: relative;
+        }
+        
+        .mobile-toggle span::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--dark-gold));
+            border-radius: 3px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-toggle:hover span::before {
+            transform: scaleX(1);
+        }
+        
+        /* Active state for mobile toggle */
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+            background-color: var(--white);
+        }
+        
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+            background-color: var(--white);
+        }
+        
+        /* 3D Card Base Styles */
+        .card-3d {
+            background-color: var(--card-gray);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 10px 20px rgba(0, 0, 0, 0.2),
+                0 6px 6px rgba(0, 0, 0, 0.1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            position: relative;
+        }
+        
+        .card-3d::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%);
+            border-radius: 15px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .card-3d::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 5%;
+            width: 90%;
+            height: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            filter: blur(10px);
+            transform: translateZ(-20px);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .card-3d:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 15px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-3d:hover::after {
+            bottom: -15px;
+            height: 20px;
+            filter: blur(15px);
+        }
+        
+        /* 3D Button Effect for Cards */
+        .card-3d .card-header {
+            background-color: var(--medium-gray);
+            padding: 15px;
+            border-bottom: 3px solid var(--gold);
+            border-radius: 15px 15px 0 0;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .card-3d .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--gold);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .card-3d:hover .card-header::before {
+            transform: translateX(0);
+        }
+        
+        .card-3d .card-content {
+            padding: 20px;
+            z-index: 2;
+            position: relative;
+        }
+        
         /* Enhanced Preloader - MADE 40% SMALLER */
         .preloader {
             position: fixed;
@@ -216,6 +428,8 @@
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
         header.scrolled {
@@ -223,6 +437,7 @@
             backdrop-filter: blur(10px);
             background-color: rgba(212, 175, 55, 0.95);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            transform: translateZ(10px);
         }
         
         .header-container {
@@ -231,23 +446,6 @@
             align-items: center;
         }
         
-        .logo {
-            font-size: 1.8rem; /* Reduced from 2rem */
-            font-weight: 700;
-            color: var(--black);
-            font-family: 'Noto Kufi Arabic', serif;
-            letter-spacing: 1px;
-            margin: 0;
-            padding: 0;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .logo:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Desktop Navigation */
         nav ul {
             display: flex;
             list-style: none;
@@ -267,181 +465,47 @@
             padding: 6px 12px; /* Reduced from 8px 15px */
             border-radius: 25px;
             overflow: hidden;
-        }
-        
-        nav ul li a:hover {
-            color: var(--black);
-        }
-        
-        /* Enhanced Mobile Toggle Button with 3D Effects */
-        .mobile-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px; /* Increased for better 3D effect */
-            height: 25px; /* Increased for better 3D effect */
-            cursor: pointer;
-            z-index: 1100;
-            transition: all 0.4s ease;
-            position: relative;
             transform-style: preserve-3d;
-            perspective: 1000px;
         }
         
-        .mobile-toggle:hover {
-            transform: rotateY(15deg) scale(1.1);
-        }
-        
-        .mobile-toggle span {
-            display: block;
-            height: 3px; /* Increased for better visibility */
-            width: 100%;
-            background-color: var(--black);
-            border-radius: 3px;
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-            transform-origin: center;
-        }
-        
-        /* 3D Animation for active state */
-        .mobile-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 8px) translateZ(10px);
-            background-color: var(--white);
-        }
-        
-        .mobile-toggle.active span:nth-child(2) {
-            opacity: 0;
-            transform: rotateY(90deg) translateX(-20px);
-        }
-        
-        .mobile-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -8px) translateZ(10px);
-            background-color: var(--white);
-        }
-        
-        /* Enhanced Mobile Navigation Menu with 3D Effects */
-        /* Mobile menu is hidden by default and only shown on mobile when active */
-        @media (max-width: 992px) {
-            nav ul {
-                position: fixed;
-                top: 0;
-                left: -320px; /* Reduced from -350px */
-                width: 280px; /* Reduced from 300px */
-                height: 100vh;
-                background: linear-gradient(145deg, var(--gold), var(--dark-gold));
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                z-index: 1050;
-                border-radius: 0 40px 40px 0; /* Reduced from 50px */
-                display: flex; /* Changed from none to flex */
-                box-shadow: 5px 0 30px rgba(0, 0, 0, 0.4); /* Enhanced shadow for 3D effect */
-                transform-style: preserve-3d;
-                transform: translateX(-100%) rotateY(-30deg);
-                opacity: 0;
-                perspective: 1000px;
-            }
-            
-            nav ul.active {
-                left: 0;
-                transform: translateX(0) rotateY(0deg);
-                opacity: 1;
-            }
-            
-            nav ul li {
-                margin: 20px 0; /* Increased spacing */
-                width: 80%;
-                transform-style: preserve-3d;
-                transition: all 0.3s ease;
-            }
-            
-            nav ul li:hover {
-                transform: translateZ(20px) translateY(-5px);
-            }
-            
-            nav ul li a {
-                font-size: 1.2rem; /* Reduced from 1.3rem */
-                width: 100%;
-                padding: 15px 22px; /* Reduced from 18px 25px */
-                border-radius: 30px; /* Reduced from 35px */
-                background-color: rgba(0, 0, 0, 0.1);
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                color: var(--black);
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-                transform-style: preserve-3d;
-                transition: all 0.3s ease;
-                position: relative;
-                overflow: hidden;
-            }
-            
-            nav ul li a::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
-                transform: translateX(-100%) rotateY(90deg);
-                transition: all 0.5s ease;
-                z-index: -1;
-            }
-            
-            nav ul li a:hover::before {
-                transform: translateX(0) rotateY(0deg);
-            }
-            
-            nav ul li a:hover {
-                background-color: rgba(0, 0, 0, 0.2);
-                border-color: var(--black);
-                color: var(--black);
-                transform: translateY(-3px) translateZ(10px);
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            }
-        }
-        
-        /* Beautiful Close Button for Mobile Menu */
-        .close-menu-btn {
-            display: none; /* Hidden by default */
+        /* 3D Menu Item Effect */
+        nav ul li a::before {
+            content: '';
             position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 50%;
-            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, var(--dark-gold), var(--gold));
+            transform: translateZ(-10px);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        
+        nav ul li a::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
             align-items: center;
-            cursor: pointer;
+            justify-content: center;
+            color: var(--black);
+            transform: translateZ(5px);
             transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            z-index: 10;
         }
         
-        @media (max-width: 992px) {
-            .close-menu-btn {
-                display: flex; /* Show on mobile */
-            }
+        nav ul li a:hover::before {
+            opacity: 1;
+            transform: translateZ(-5px);
         }
         
-        .close-menu-btn:hover {
-            transform: rotateZ(90deg) scale(1.1);
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
-        .close-menu-btn i {
+        nav ul li a:hover::after {
+            transform: translateZ(10px);
             color: var(--white);
-            font-size: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .close-menu-btn:hover i {
-            transform: rotateZ(-90deg);
         }
         
         /* Enhanced Hero Section with Parallax and Typewriter Effect - SMALLER FONT */
@@ -671,6 +735,8 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
         .experience-card::after {
@@ -692,8 +758,8 @@
         }
         
         .experience-card:hover {
-            transform: translateY(-8px); /* Reduced from -10px */
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
         
         .experience-card .exp-header {
@@ -845,11 +911,13 @@
             border-radius: 20px;
             border-left: 3px solid var(--gold);
             transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
         .timeline-content:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.03) translateY(-5px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
         }
         
         .timeline-content h3 {
@@ -895,6 +963,8 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
         .skill-card::before {
@@ -915,8 +985,8 @@
         }
         
         .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
         
         .skill-header {
@@ -975,6 +1045,8 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Reduced from 10px 20px */
             position: relative;
             overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
         .qual-card::before {
@@ -995,8 +1067,8 @@
         }
         
         .qual-card:hover {
-            transform: translateY(-8px); /* Reduced from -10px */
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Reduced from 15px 30px */
+            transform: translateY(-12px) rotateX(5deg);
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.4); /* Reduced from 15px 30px */
         }
         
         .qual-card h3 {
@@ -1073,6 +1145,8 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
         .cert-card::before {
@@ -1093,8 +1167,8 @@
         }
         
         .cert-card:hover {
-            transform: translateY(-8px); /* Reduced from -10px */
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Reduced from 15px 30px */
+            transform: translateY(-12px) rotateX(5deg);
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.4); /* Reduced from 15px 30px */
         }
         
         .cert-image {
@@ -1320,6 +1394,8 @@
             border: 1px solid rgba(212, 175, 55, 0.1);
             position: relative;
             overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
         .contact-detail-item::after {
@@ -1340,9 +1416,9 @@
         }
         
         .contact-detail-item:hover {
-            transform: translateY(-8px); /* Reduced from -10px */
+            transform: translateY(-12px) rotateX(5deg);
             background-color: rgba(212, 175, 55, 0.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Reduced from 10px 20px */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Reduced from 10px 20px */
         }
         
         .contact-detail-item .icon {
@@ -1957,20 +2033,8 @@
                 display: none;
             }
             
-            /* Desktop Navigation - Always visible */
             nav ul {
                 display: flex !important;
-                position: static;
-                width: auto;
-                height: auto;
-                background: none;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
-                box-shadow: none;
-                transform: none;
-                opacity: 1;
-                transition: none;
             }
             
             .hero h1 {
@@ -2060,6 +2124,99 @@
                 margin-right: 0;
             }
             
+            nav ul {
+                position: fixed;
+                top: 0;
+                left: -320px; /* Reduced from -350px */
+                width: 280px; /* Reduced from 300px */
+                height: 100vh;
+                background: linear-gradient(145deg, var(--gold), var(--dark-gold));
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: left 0.5s ease;
+                z-index: 1050;
+                border-radius: 0 40px 40px 0; /* Reduced from 50px */
+                display: none;
+                box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3); /* Reduced from 25px */
+                transform-style: preserve-3d;
+                perspective: 1000px;
+            }
+            
+            nav ul.active {
+                left: 0;
+                display: flex;
+                transform: translateZ(20px);
+            }
+            
+            nav ul li {
+                margin: 18px 0; /* Reduced from 20px */
+                width: 80%;
+            }
+            
+            nav ul li a {
+                font-size: 1.2rem; /* Reduced from 1.3rem */
+                width: 100%;
+                padding: 15px 22px; /* Reduced from 18px 25px */
+                border-radius: 30px; /* Reduced from 35px */
+                background-color: rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: var(--black);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Reduced from 5px 15px */
+                transform-style: preserve-3d;
+                perspective: 1000px;
+            }
+            
+            nav ul li a::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(145deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+                border-radius: 30px;
+                transform: translateZ(-10px);
+                transition: all 0.3s ease;
+                opacity: 0;
+            }
+            
+            nav ul li a::after {
+                content: attr(data-text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--black);
+                transform: translateZ(5px);
+                transition: all 0.3s ease;
+            }
+            
+            nav ul li a:hover::before {
+                opacity: 1;
+                transform: translateZ(-5px);
+            }
+            
+            nav ul li a:hover::after {
+                transform: translateZ(10px);
+                color: var(--white);
+            }
+            
+            nav ul li a:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-color: var(--black);
+                color: var(--black);
+                transform: translateY(-3px) translateZ(5px);
+            }
+            
             .hero {
                 margin-top: 4vh; /* Reduced from 6vh */
             }
@@ -2136,7 +2293,6 @@
             .contact-detail-item {
                 width: 100%;
                 max-width: 260px; /* Reduced from 280px */
-                padding: 18px; /* Reduced from 20px */
             }
             
             .whatsapp-float {
@@ -2544,15 +2700,12 @@
             <div class="logo">محمد اشرف</div>
             <nav>
                 <ul id="navMenu">
-                    <div class="close-menu-btn" id="closeMenuBtn">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#qualifications">Qualifications</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-text="Home">Home</a></li>
+                    <li><a href="#experience" data-text="Experience">Experience</a></li>
+                    <li><a href="#skills" data-text="Skills">Skills</a></li>
+                    <li><a href="#qualifications" data-text="Qualifications">Qualifications</a></li>
+                    <li><a href="#certifications" data-text="Certifications">Certifications</a></li>
+                    <li><a href="#contact" data-text="Contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -2583,14 +2736,14 @@
             
             <!-- Mobile Experience Cards -->
             <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="exp-header">
+                <div class="experience-card card-3d">
+                    <div class="exp-header card-header">
                         
                         <h3>IT Technical Support Engineer</h3>
                         <div class="company"><i class="fas fa-building"></i> Economic Group, Doha Qatar</div>
                         <div class="duration"><i class="fas fa-calendar-alt"></i> 2024 - Present</div>
                     </div>
-                    <div class="exp-content">
+                    <div class="exp-content card-content">
                         <p>
                            Providing advanced technical support for more than 100 users. Resolving complex network and system issues, reducing downtime.
                         </p>
@@ -2602,13 +2755,13 @@
                     </div>
                 </div>
                 
-                <div class="experience-card">
-                    <div class="exp-header">
+                <div class="experience-card card-3d">
+                    <div class="exp-header card-header">
                         <h3>IT Technical Support Specialist</h3>
                         <div class="company"><i class="fas fa-building"></i>Mediawork, Lusail Qatar</div>
                         <div class="duration"><i class="fas fa-calendar-alt"></i> 2022 - 2023</div>
                     </div>
-                    <div class="exp-content">
+                    <div class="exp-content card-content">
                         <p>
                             Managed technical support operations for corporate clients. Installed and configured Systems, Routers Access points, printers . 
                         </p>
@@ -2620,13 +2773,13 @@
                     </div>
                 </div>
                 
-                <div class="experience-card">
-                    <div class="exp-header">
+                <div class="experience-card card-3d">
+                    <div class="exp-header card-header">
                         <h3>Technician Team Leader</h3>
                         <div class="company"><i class="fas fa-building"></i> Ooredoo Qatar</div>
                         <div class="duration"><i class="fas fa-calendar-alt"></i> 2022 - 2022</div>
                     </div>
-                    <div class="exp-content">
+                    <div class="exp-content card-content">
                         <p>
                              Assisted senior technicians in resolving technical issues. Gained experience in network administration from Fiber Line to  ISP.
                         </p>
@@ -2638,13 +2791,13 @@
                     </div>
                 </div>
                 
-                <div class="experience-card">
-                    <div class="exp-header">
+                <div class="experience-card card-3d">
+                    <div class="exp-header card-header">
                         <h3>IT Support cum Jr. Web Developer</h3>
                         <div class="company"><i class="fas fa-building"></i> Codezones IT Services, Lucknow, India</div>
                         <div class="duration"><i class="fas fa-calendar-alt"></i> 2020 - 2022</div>
                     </div>
-                    <div class="exp-content">
+                    <div class="exp-content card-content">
                         <p>
                                Web Designing and Backend Database connectivity. Troubleshooted network connectivity issues, installed and configured software, and maintained all IT infrastructure.
                         </p>
@@ -2660,7 +2813,7 @@
             <!-- Desktop Timeline -->
             <div class="timeline">
                 <div class="timeline-item left">
-                    <div class="timeline-content">
+                    <div class="timeline-content card-3d">
                         <h3>IT Technical Support Engineer</h3>
                         <div class="company"><i class="fas fa-building"></i> Economic Group, Doha Qatar</div>
                         <div class="duration"><i class="fas fa-calendar-alt"></i> 2024 - Present</div>
@@ -2675,7 +2828,7 @@
                     </div>
                 </div>
                 <div class="timeline-item right">
-                    <div class="timeline-content">
+                    <div class="timeline-content card-3d">
                         <h3>IT Technical Support Specialist</h3>
                         <div class="company"><i class="fas fa-building"></i> Mediawork, Lusail Qatar</div>
                         <div class="duration"><i class="fas fa-calendar-alt"></i> 2017 - 2020</div>
@@ -2690,7 +2843,7 @@
                     </div>
                 </div>
                 <div class="timeline-item left">
-                    <div class="timeline-content">
+                    <div class="timeline-content card-3d">
                         <h3>IT Support Technician</h3>
                         <div class="company"><i class="fas fa-building"></i> Ooredoo Qatar</div>
                         <div class="duration"><i class="fas fa-calendar-alt"></i> 2022 - 2022</div>
@@ -2705,7 +2858,7 @@
                     </div>
                 </div>
                 <div class="timeline-item right">
-                    <div class="timeline-content">
+                    <div class="timeline-content card-3d">
                         <h3>Junior IT Support</h3>
                         <div class="company"><i class="fas fa-building"></i> Codezones IT Services, Lucknow India </div>
                         <div class="duration"><i class="fas fa-calendar-alt"></i> 2020 - 2022</div>
@@ -2732,7 +2885,7 @@
                 <p>My expertise and technical proficiencies</p>
             </div>
             <div class="skills-grid">
-                <div class="skill-card">
+                <div class="skill-card card-3d">
                     <div class="skill-header">
                         <div class="skill-name">Network Administration</div>
                         <div class="skill-percentage">95%</div>
@@ -2742,7 +2895,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-card">
+                <div class="skill-card card-3d">
                     <div class="skill-header">
                         <div class="skill-name">System Troubleshooting</div>
                         <div class="skill-percentage">90%</div>
@@ -2752,7 +2905,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-card">
+                <div class="skill-card card-3d">
                     <div class="skill-header">
                         <div class="skill-name">Cybersecurity</div>
                         <div class="skill-percentage">85%</div>
@@ -2762,7 +2915,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-card">
+                <div class="skill-card card-3d">
                     <div class="skill-header">
                         <div class="skill-name">Cloud Computing</div>
                         <div class="skill-percentage">80%</div>
@@ -2772,7 +2925,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-card">
+                <div class="skill-card card-3d">
                     <div class="skill-header">
                         <div class="skill-name">IT Service Management</div>
                         <div class="skill-percentage">88%</div>
@@ -2793,7 +2946,7 @@
                 <p>My educational background and academic achievements</p>
             </div>
             <div class="qual-grid">
-                <div class="qual-card">
+                <div class="qual-card card-3d">
                     <h3><i class="fas fa-certificate"></i> Master in Computer Application</h3>
                     <div class="institution"><i class="fas fa-university"></i> Integral University, Lucknow India</div>
                     <div class="year"><i class="fas fa-calendar-alt"></i> 2018 - 2020</div>
@@ -2801,7 +2954,7 @@
                         Specialized in Network Administration and System Security Web Development and Cybersecurity as major subject.
                     </div>
                 </div>
-                <div class="qual-card">
+                <div class="qual-card card-3d">
                     <h3><i class="fas fa-certificate"></i> Bachelor in Computer Application</h3>
                     <div class="institution"><i class="fas fa-school"></i> Integral University, Lucknow India</div>
                     <div class="year"><i class="fas fa-calendar-alt"></i> 2015 - 2018</div>
@@ -2815,7 +2968,7 @@
 
 
 
-                <div class="qual-card">
+                <div class="qual-card card-3d">
                     <h3><i class="fas fa-award"></i> Senior Secondary School </h3>
                     <div class="institution"><i class="fas fa-building"></i> Aligarh Muslim University Aligarh, India</div>
                     <div class="year"><i class="fas fa-calendar-alt"></i> 2013 - 2015</div>
@@ -2823,7 +2976,7 @@
                         Completed comprehensive training in IT support methodologies, customer service, and technical troubleshooting techniques.
                     </div>
                 </div>
-                 <div class="qual-card">
+                 <div class="qual-card card-3d">
                     <h3><i class="fas fa-award"></i> Islamic Graduation</h3>
                     <div class="institution"><i class="fas fa-university"></i> Darul Uloom Deoband Saharanpur, India</div>
                     <div class="year"><i class="fas fa-calendar-alt"></i> 2010 - 2012</div>
@@ -2851,7 +3004,7 @@
             </div>
             <div class="cert-grid">
 
- <div class="cert-card">
+ <div class="cert-card card-3d">
                     <div class="cert-image">
                         <img src="https://i.postimg.cc/436bFqNR/IMG-20251002-085808.jpg" alt="Network+ Certification">
                     </div>
@@ -2869,7 +3022,7 @@
 
 
 
-                <div class="cert-card">
+                <div class="cert-card card-3d">
                     <div class="cert-image">
                         <img src="https://i.postimg.cc/CMBpBsvp/IMG-20251002-084148.jpg" alt="CompTIA A+ Certification">
                     </div>
@@ -2884,7 +3037,7 @@
                     </div>
                 </div>
                
-                <div class="cert-card">
+                <div class="cert-card card-3d">
                     <div class="cert-image">
                         <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="ITIL Foundation">
                     </div>
@@ -2912,14 +3065,14 @@
                 <div class="footer-contact">
                     <h3>Get In Touch</h3>
                     <div class="contact-details">
-                        <div class="contact-detail-item">
+                        <div class="contact-detail-item card-3d">
                             <div class="icon">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png" alt="Gmail">
                             </div>
                             <h4>Email</h4>
                             <a href="mailto:it.ashraf53@gmail.com">it.ashraf53@gmail.com</a>
                         </div>
-                        <div class="contact-detail-item">
+                        <div class="contact-detail-item card-3d">
                             <div class="icon">
 
 
@@ -2932,7 +3085,7 @@
                             <h4>Phone</h4>
                             <a href="tel:+97431656503">+974-31656503</a>
                         </div>
-                        <div class="contact-detail-item">
+                        <div class="contact-detail-item card-3d">
                             <div class="icon">
 
 
@@ -2944,7 +3097,7 @@
                             <h4>Location</h4>
                             <p>Doha, Qatar</p>
                         </div>
-                        <div class="contact-detail-item">
+                        <div class="contact-detail-item card-3d">
                             <div class="icon">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp">
                             </div>
@@ -3024,19 +3177,36 @@
             }
         });
         
-        // Enhanced Mobile Toggle with 3D Effects
+        // Enhanced Mobile Toggle with 3D animation
         const mobileToggle = document.getElementById('mobileToggle');
         const navMenu = document.getElementById('navMenu');
-        const closeMenuBtn = document.getElementById('closeMenuBtn');
         
         mobileToggle.addEventListener('click', function() {
-            navMenu.classList.add('active');
-            mobileToggle.classList.add('active');
-        });
-        
-        closeMenuBtn.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            mobileToggle.classList.remove('active');
+            navMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+            
+            // Add 3D rotation effect to menu items when opened
+            if (navMenu.classList.contains('active')) {
+                const menuItems = navMenu.querySelectorAll('li');
+                menuItems.forEach((item, index) => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px) translateZ(-50px)';
+                    
+                    setTimeout(() => {
+                        item.style.transition = 'all 0.3s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0) translateZ(0)';
+                    }, index * 100);
+                });
+            } else {
+                // Reset menu items when closing
+                const menuItems = navMenu.querySelectorAll('li');
+                menuItems.forEach(item => {
+                    item.style.transition = 'none';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0) translateZ(0)';
+                });
+            }
         });
         
         // Close mobile menu when clicking on a link
@@ -3045,6 +3215,12 @@
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 mobileToggle.classList.remove('active');
+                
+                // Reset toggle icon
+                const spans = mobileToggle.querySelectorAll('span');
+                spans[0].style.transform = 'rotate(0)';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'rotate(0)';
             });
         });
         
@@ -3131,8 +3307,26 @@
             heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
         });
         
-       
+        // Add 3D tilt effect to cards on mouse move
+        document.querySelectorAll('.card-3d').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+            });
             
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+            });
+        });
     </script>
 </body>
-</html>
+</html>  
