@@ -7,23 +7,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Noto+Kufi+Arabic:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* CSS Variables - Professional Gray and Gold Color Scheme */
+/* CSS Variables - Professional Golden Color Scheme */
 :root {
 /* Default Light Theme (White Honeycomb) */
 --bg-primary: #FFFFFF;
---bg-secondary: #F5F5F5;
+--bg-secondary: #FFF9E6;
 --bg-pattern: var(--white-hexagon-pattern);
---text-primary: #333333;
---text-secondary: #666666;
---text-light: #F5F5F5;
---text-dim: #CCCCCC;
---card-bg: #4A4A4A;
---card-text: #E6E6E6;
---header-bg: #D4AF37;
+--text-primary: #8B6914;
+--text-secondary: #B8860B;
+--text-light: #FFF9E6;
+--text-dim: #D4AF37;
+--card-bg: #8B6914;
+--card-text: #FFF9E6;
+--header-bg: #B8860B;
 --header-text: #FFFFFF;
 --accent: #D4AF37;
---accent-dark: #B8941F;
---accent-light: #E6C35C;
+--accent-dark: #8B6914;
+--accent-light: #FFD700;
 --shadow-color: rgba(0, 0, 0, 0.2);
 --border-color: rgba(212, 175, 55, 0.3);
 
@@ -38,26 +38,26 @@
 --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 
 /* Background Patterns */
---white-hexagon-pattern: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><defs><pattern id="hexPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)"><polygon points="50,0 93.3,25 93.3,75 50,100 6.7,75 6.7,25" fill="none" stroke="%23e0e0e0" stroke-width="1.5"/><polygon points="0,0 43.3,25 43.3,75 0,100 -43.3,75 -43.3,25" fill="none" stroke="%23f0f0f0" stroke-width="1"/><polygon points="100,0 143.3,25 143.3,75 100,100 56.7,75 56.7,25" fill="none" stroke="%23f0f0f0" stroke-width="1"/><polygon points="50,50 93.3,75 93.3,125 50,150 6.7,125 6.7,75" fill="none" stroke="%23f0f0f0" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hexPattern)"/></svg>');
---black-hexagon-pattern: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><defs><pattern id="hexPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)"><polygon points="50,0 93.3,25 93.3,75 50,100 6.7,75 6.7,25" fill="none" stroke="%23333" stroke-width="1.5"/><polygon points="0,0 43.3,25 43.3,75 0,100 -43.3,75 -43.3,25" fill="none" stroke="%23444" stroke-width="1"/><polygon points="100,0 143.3,25 143.3,75 100,100 56.7,75 56.7,25" fill="none" stroke="%23444" stroke-width="1"/><polygon points="50,50 93.3,75 93.3,125 50,150 6.7,125 6.7,75" fill="none" stroke="%23444" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hexPattern)"/></svg>');
+--white-hexagon-pattern: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><defs><pattern id="hexPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)"><polygon points="50,0 93.3,25 93.3,75 50,100 6.7,75 6.7,25" fill="none" stroke="%23FFD700" stroke-width="1.5"/><polygon points="0,0 43.3,25 43.3,75 0,100 -43.3,75 -43.3,25" fill="none" stroke="%23FFF9E6" stroke-width="1"/><polygon points="100,0 143.3,25 143.3,75 100,100 56.7,75 56.7,25" fill="none" stroke="%23FFF9E6" stroke-width="1"/><polygon points="50,50 93.3,75 93.3,125 50,150 6.7,125 6.7,75" fill="none" stroke="%23FFF9E6" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hexPattern)"/></svg>');
+--black-hexagon-pattern: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><defs><pattern id="hexPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)"><polygon points="50,0 93.3,25 93.3,75 50,100 6.7,75 6.7,25" fill="none" stroke="%238B6914" stroke-width="1.5"/><polygon points="0,0 43.3,25 43.3,75 0,100 -43.3,75 -43.3,25" fill="none" stroke="%23B8860B" stroke-width="1"/><polygon points="100,0 143.3,25 143.3,75 100,100 56.7,75 56.7,25" fill="none" stroke="%23B8860B" stroke-width="1"/><polygon points="50,50 93.3,75 93.3,125 50,150 6.7,125 6.7,75" fill="none" stroke="%23B8860B" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hexPattern)"/></svg>');
 }
 
 /* Dark Theme (Black Honeycomb) */
 body.dark-theme {
---bg-primary: #1A1A1A;
---bg-secondary: #2C2C2C;
+--bg-primary: #1A1400;
+--bg-secondary: #332800;
 --bg-pattern: var(--black-hexagon-pattern);
---text-primary: #F5F5F5;
---text-secondary: #CCCCCC;
+--text-primary: #FFF9E6;
+--text-secondary: #D4AF37;
 --text-light: #000000; /* Changed to black for hero text */
---text-dim: #999999;
---card-bg: #2C2C2C;
---card-text: #E6E6E6;
---header-bg: #D4AF37;
---header-text: #000000;
+--text-dim: #B8860B;
+--card-bg: #332800;
+--card-text: #FFF9E6;
+--header-bg: #8B6914;
+--header-text: #FFFFFF;
 --accent: #D4AF37;
---accent-dark: #B8941F;
---accent-light: #E6C35C;
+--accent-dark: #8B6914;
+--accent-light: #FFD700;
 --shadow-color: rgba(0, 0, 0, 0.4);
 --border-color: rgba(212, 175, 55, 0.2);
 }
@@ -367,7 +367,7 @@ stroke-width: 4;
 
 .progress-bar {
 fill: none;
-stroke: var(--accent);
+stroke: #D4AF37;
 stroke-width: 4;
 stroke-linecap: round;
 stroke-dasharray: 150.72;
@@ -437,7 +437,7 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 header.scrolled {
 padding: 2px 0;
 backdrop-filter: blur(10px);
-background-color: rgba(212, 175, 55, 0.95);
+background-color: rgba(184, 134, 11, 0.95);
 box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
@@ -669,20 +669,138 @@ text-align: center;
 padding: 0 20px;
 }
 
-.profile-photo {
-width: 180px;
-height: 180px;
-border-radius: 50%;
-border: 5px solid var(--accent);
+/* Enhanced 3D Profile Photo - Smaller Size */
+.profile-photo-container {
+position: relative;
+width: 150px;
+height: 150px;
 margin-bottom: 25px;
-object-fit: cover;
-box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
-transition: all 0.4s ease;
+perspective: 1000px;
 }
 
-.profile-photo:hover {
+.profile-photo-wrapper {
+position: relative;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: transform 1s ease;
+}
+
+.profile-photo-container:hover .profile-photo-wrapper {
+transform: rotateY(10deg) rotateX(-10deg);
+}
+
+.profile-photo {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+border: 4px solid var(--accent);
+object-fit: cover;
+box-shadow: 
+0 0 20px rgba(212, 175, 55, 0.8),
+0 8px 16px rgba(0, 0, 0, 0.3),
+0 0 0 3px rgba(255, 255, 255, 0.1) inset;
+transition: all 0.5s ease;
+position: relative;
+z-index: 2;
+}
+
+.profile-photo-container:hover .profile-photo {
+box-shadow: 
+0 0 30px rgba(212, 175, 55, 1),
+0 12px 24px rgba(0, 0, 0, 0.4),
+0 0 0 5px rgba(255, 255, 255, 0.2) inset;
 transform: scale(1.05);
-box-shadow: 0 0 35px rgba(212, 175, 55, 0.8);
+}
+
+/* Rotating bullet container - MODIFIED FOR RESPONSIVE ROTATION */
+.profile-bullet-container {
+position: absolute;
+top: -10px;
+left: -10px;
+right: -10px;
+bottom: -10px;
+width: auto;
+height: auto;
+animation: rotateBullet 10s linear infinite;
+z-index: 3;
+pointer-events: none;
+}
+
+/* Rotating bullet - MODIFIED POSITION */
+.profile-bullet {
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 12px;
+height: 12px;
+background-color: var(--accent);
+border-radius: 50%;
+box-shadow: 
+0 0 8px rgba(212, 175, 55, 0.8),
+0 2px 4px rgba(0, 0, 0, 0.3);
+border: 2px solid white;
+}
+
+@keyframes rotateBullet {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* 3D Frame Effect */
+.profile-photo-frame {
+position: absolute;
+top: -10px;
+left: -10px;
+right: -10px;
+bottom: -10px;
+border-radius: 50%;
+border: 2px solid rgba(212, 175, 55, 0.5);
+box-shadow: 
+0 0 15px rgba(212, 175, 55, 0.5),
+inset 0 0 15px rgba(212, 175, 55, 0.2);
+z-index: 1;
+}
+
+/* Floating particles effect */
+.profile-particle {
+position: absolute;
+width: 8px;
+height: 8px;
+background-color: rgba(212, 175, 55, 0.7);
+border-radius: 50%;
+z-index: 0;
+box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+}
+
+.particle-1 {
+top: 20%;
+left: 10%;
+animation: floatParticle 8s infinite ease-in-out;
+}
+
+.particle-2 {
+top: 70%;
+left: 15%;
+animation: floatParticle 10s infinite ease-in-out 1s;
+}
+
+.particle-3 {
+top: 30%;
+right: 10%;
+animation: floatParticle 9s infinite ease-in-out 2s;
+}
+
+.particle-4 {
+top: 60%;
+right: 15%;
+animation: floatParticle 11s infinite ease-in-out 3s;
+}
+
+@keyframes floatParticle {
+0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+50% { transform: translateY(-15px) scale(1.2); opacity: 1; }
 }
 
 .hero h1 {
@@ -1961,11 +2079,11 @@ height: 50px;
 fill: var(--accent-dark);
 }
 
-/* Chatbot Styles - Updated */
+/* Enhanced Chatbot Styles - Updated */
 .chatbot-float {
 position: fixed;
-width: 55px;
-height: 55px;
+width: 60px;
+height: 60px;
 bottom: 30px;
 right: 30px;
 background: linear-gradient(145deg, #4285F4, #1a73e8);
@@ -1973,9 +2091,9 @@ color: white;
 border-radius: 50%;
 text-align: center;
 box-shadow:
-0 4px 0 #1a73e8,
-0 6px 8px rgba(0, 0, 0, 0.15),
-0 2px 0 rgba(255, 255, 255, 0.2) inset;
+0 6px 0 #1a73e8,
+0 8px 15px rgba(0, 0, 0, 0.2),
+0 3px 0 rgba(255, 255, 255, 0.2) inset;
 z-index: 1000;
 display: flex;
 align-items: center;
@@ -1983,28 +2101,34 @@ justify-content: center;
 transition: all 0.4s ease;
 cursor: pointer;
 overflow: hidden;
-border: 2px solid white;
+border: 3px solid white;
+transform-style: preserve-3d;
 }
 
 .chatbot-float:hover {
-transform: scale(1.05);
+transform: translateY(-5px) scale(1.05);
 box-shadow:
 0 2px 0 #1a73e8,
-0 4px 6px rgba(0, 0, 0, 0.15),
+0 4px 10px rgba(0, 0, 0, 0.2),
 0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
 
 .chatbot-float:active {
-transform: scale(0.98);
+transform: translateY(0) scale(0.98);
 box-shadow:
 0 0 0 #1a73e8,
-0 2px 4px rgba(0, 0, 0, 0.15),
+0 2px 5px rgba(0, 0, 0, 0.15),
 0 0 0 rgba(255, 255, 255, 0.2) inset;
 }
 
 .chatbot-float i {
 color: white;
-font-size: 24px;
+font-size: 26px;
+transition: all 0.3s ease;
+}
+
+.chatbot-float:hover i {
+transform: scale(1.1);
 }
 
 .chatbot-window {
@@ -2015,7 +2139,7 @@ width: 350px;
 height: 450px;
 background-color: white;
 border-radius: 15px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 display: flex;
 flex-direction: column;
 z-index: 1000;
@@ -2072,6 +2196,7 @@ transition: all 0.3s ease;
 
 .chatbot-close:hover {
 background-color: rgba(255, 255, 255, 0.2);
+transform: rotate(90deg);
 }
 
 .chatbot-messages {
@@ -2090,6 +2215,18 @@ padding: 10px 15px;
 border-radius: 18px;
 position: relative;
 line-height: 1.4;
+animation: messageSlide 0.3s ease-out;
+}
+
+@keyframes messageSlide {
+from {
+opacity: 0;
+transform: translateY(10px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
 .bot-message {
@@ -2128,6 +2265,7 @@ font-size: 0.9rem;
 
 .chatbot-input input:focus {
 border-color: var(--accent);
+box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
 .chatbot-input button {
@@ -2489,6 +2627,41 @@ font-size: 1rem;
 }
 
 @media (min-width: 993px) {
+/* Reduced header height for screens 992px and above */
+header {
+padding: 2px 0; /* Reduced from 4px */
+}
+
+header.scrolled {
+padding: 1px 0; /* Reduced from 2px */
+}
+
+.logo {
+padding: 4px 10px; /* Reduced from 6px 12px */
+font-size: 1.2rem; /* Reduced from 1.4rem */
+}
+
+nav ul li a {
+padding: 8px 16px; /* Reduced from 10px 20px */
+font-size: 0.8rem; /* Reduced from 0.9rem */
+}
+
+.theme-toggle {
+width: 60px; /* Reduced from 70px */
+height: 30px; /* Reduced from 34px */
+}
+
+.theme-toggle-indicator {
+width: 24px; /* Reduced from 28px */
+height: 24px; /* Reduced from 28px */
+top: 3px;
+left: 3px;
+}
+
+body.dark-theme .theme-toggle-indicator {
+left: 33px; /* Adjusted for smaller toggle */
+}
+
 .mobile-toggle {
 display: none;
 }
@@ -2770,10 +2943,15 @@ background-position: center 30%;
 background-attachment: scroll;
 }
 
-.profile-photo {
-width: 150px;
-height: 150px;
-margin-bottom: 20px;
+.profile-photo-container {
+width: 130px;
+height: 130px;
+}
+
+/* Adjust bullet size for smaller profile */
+.profile-bullet {
+width: 10px;
+height: 10px;
 }
 
 /* Chatbot adjustments for mobile */
@@ -2869,10 +3047,15 @@ padding: 8px 20px;
 font-size: 0.85rem;
 }
 
-.profile-photo {
-width: 120px;
-height: 120px;
-margin-bottom: 15px;
+.profile-photo-container {
+width: 100px;
+height: 100px;
+}
+
+/* Adjust bullet size for smaller profile */
+.profile-bullet {
+width: 8px;
+height: 8px;
 }
 
 /* Section title adjustments */
@@ -3158,14 +3341,14 @@ font-size: 0.8rem;
 
 /* Chatbot adjustments for small screens */
 .chatbot-float {
-width: 45px;
-height: 45px;
+width: 50px;
+height: 50px;
 bottom: 20px;
 right: 20px;
 }
 
 .chatbot-float i {
-font-size: 20px;
+font-size: 22px;
 }
 
 .chatbot-window {
@@ -3273,8 +3456,20 @@ stroke-dasharray="339.292" stroke-dashoffset="339.292" stroke-linecap="round"/>
 <div class="hero-golden-shade"></div>
 <div class="container">
 <div class="hero-content">
-<!-- Profile Photo Added Here -->
+<!-- Enhanced 3D Profile Photo - Smaller Size with Rotating Bullet -->
+<div class="profile-photo-container">
+<div class="profile-photo-wrapper">
+<div class="profile-photo-frame"></div>
 <img src="https://i.postimg.cc/j2Ndg1xL/IMG-20250930-WA0003.jpg" alt="Mohammad Ashraf" class="profile-photo">
+<div class="profile-bullet-container">
+<div class="profile-bullet"></div>
+</div>
+<div class="profile-particle particle-1"></div>
+<div class="profile-particle particle-2"></div>
+<div class="profile-particle particle-3"></div>
+<div class="profile-particle particle-4"></div>
+</div>
+</div>
 
 <h1><span class="typewriter" id="typewriter"></span> | IT Technical Support Engineer</h1>
 <p>Experienced IT Technical Support Engineer with a passion for resolving complex technical issues. </p>
@@ -3967,9 +4162,12 @@ const chatbotMessages = document.getElementById('chatbotMessages');
 const chatbotNotification = document.getElementById('chatbotNotification');
 const notificationClose = document.getElementById('notificationClose');
 
+// Flag to track if notification was closed by user
+let notificationClosed = false;
+
 // Toggle chatbot window
 chatbotToggle.addEventListener('click', function() {
-chatbotWindow.classList.add('active');
+chatbotWindow.classList.toggle('active');
 // Hide notification when opening chatbot
 chatbotNotification.classList.remove('show');
 });
@@ -3986,11 +4184,14 @@ chatbotNotification.classList.add('show');
 // Close notification
 notificationClose.addEventListener('click', function() {
 chatbotNotification.classList.remove('show');
+notificationClosed = true; // Set flag when notification is closed
 });
 
-// Open chatbot when clicking on notification
+// Open chatbot when clicking on notification (only if not closed by user)
 chatbotNotification.addEventListener('click', function() {
+if (!notificationClosed) {
 chatbotWindow.classList.add('active');
+}
 chatbotNotification.classList.remove('show');
 });
 
