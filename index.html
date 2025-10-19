@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Cloudflare Verification Meta Tag -->
+<meta name="cf-verification" content="YOUR_VERIFICATION_CODE">
 <title>Mohammad Ashraf - IT Technical Support Engineer</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Noto+Kufi+Arabic:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* CSS Variables - Professional Gray and Gold Color Scheme */
+/* CSS Variables - Professional Gray and New Color Scheme */
 :root {
 /* Default Light Theme (White Honeycomb) */
 --bg-primary: #FFFFFF;
@@ -19,13 +21,13 @@
 --text-dim: #CCCCCC;
 --card-bg: #4A4A4A;
 --card-text: #E6E6E6;
---header-bg: #D4AF37;
+--header-bg: #8cd9d8; /* Changed from golden to new color */
 --header-text: #FFFFFF;
---accent: #D4AF37;
---accent-dark: #B8941F;
---accent-light: #E6C35C;
+--accent: #8cd9d8; /* Changed from golden to new color */
+--accent-dark: #6bb7b6; /* Darker version of the new color */
+--accent-light: #fcffff; /* Lighter version of the new color */
 --shadow-color: rgba(0, 0, 0, 0.2);
---border-color: rgba(212, 175, 55, 0.3);
+--border-color: rgba(140, 217, 216, 0.3); /* Updated with new color */
 
 /* Brand Colors */
 --gmail-red: #EA4335;
@@ -49,17 +51,17 @@ body.dark-theme {
 --bg-pattern: var(--black-hexagon-pattern);
 --text-primary: #F5F5F5;
 --text-secondary: #CCCCCC;
---text-light: #000000; /* Changed to black for hero text */
+--text-light: #000000; /* Changed to black for hero text */      
 --text-dim: #999999;
 --card-bg: #2C2C2C;
 --card-text: #E6E6E6;
---header-bg: #D4AF37;
---header-text: #FFFFFF;
---accent: #D4AF37;
---accent-dark: #B8941F;
---accent-light: #E6C35C;
+--header-bg: #8cd9d8; /* Changed from golden to new color */
+--header-text: #131212e7;
+--accent: #8cd9d8; /* Changed from golden to new color */
+--accent-dark: #6bb7b6; /* Darker version of the new color */
+--accent-light: #aee8e7; /* Lighter version of the new color */
 --shadow-color: rgba(0, 0, 0, 0.4);
---border-color: rgba(212, 175, 55, 0.2);
+--border-color: rgba(140, 217, 216, 0.2); /* Updated with new color */
 }
 
 /* Global Styles */
@@ -312,7 +314,7 @@ height: 72px;
 border-radius: 50%;
 overflow: hidden;
 border: 2px solid var(--accent);
-box-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+box-shadow: 0 0 12px rgba(140, 217, 216, 0.7); /* Updated with new color */
 animation: pulse 2s infinite;
 position: relative;
 background-color: var(--bg-secondary);
@@ -361,7 +363,7 @@ height: 100%;
 
 .progress-background {
 fill: none;
-stroke: rgba(212, 175, 55, 0.3);
+stroke: rgba(140, 217, 216, 0.3); /* Updated with new color */
 stroke-width: 4;
 }
 
@@ -383,7 +385,7 @@ transform: translate(-50%, -50%);
 font-size: 0.7rem;
 font-weight: 700;
 color: var(--accent);
-text-shadow: 0 0 6px rgba(212, 175, 55, 0.8);
+text-shadow: 0 0 6px rgba(140, 217, 216, 0.8); /* Updated with new color */
 }
 
 .preloader-name {
@@ -409,9 +411,9 @@ width: 100%;
 }
 
 @keyframes pulse {
-0% { transform: scale(1); box-shadow: 0 0 9px rgba(212, 175, 55, 0.5); }
-50% { transform: scale(1.02); box-shadow: 0 0 12px rgba(212, 175, 55, 0.7); }
-100% { transform: scale(1); box-shadow: 0 0 9px rgba(212, 175, 55, 0.5); }
+0% { transform: scale(1); box-shadow: 0 0 9px rgba(140, 217, 216, 0.5); } /* Updated with new color */
+50% { transform: scale(1.02); box-shadow: 0 0 12px rgba(140, 217, 216, 0.7); } /* Updated with new color */
+100% { transform: scale(1); box-shadow: 0 0 9px rgba(140, 217, 216, 0.5); } /* Updated with new color */
 }
 
 @keyframes fadeIn {
@@ -419,26 +421,25 @@ width: 100%;
 100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Enhanced Header with Blur Effect - FIXED HEIGHT */
+/* Enhanced Header with Blur Effect - REDUCED HEIGHT */
 header {
 position: fixed;
 top: 0;
 left: 0;
 width: 100%;
-height: 60px; /* Fixed height for all screen sizes */
+padding: 4px 0;
 background-color: var(--header-bg);
 z-index: 1000;
 transition: all 0.4s ease;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-display: flex;
-align-items: center; /* Vertically center content */
 }
 
 header.scrolled {
+padding: 2px 0;
 backdrop-filter: blur(10px);
-background-color: rgba(212, 175, 55, 0.95);
+background-color: rgba(140, 217, 216, 0.95); /* Updated with new color */
 box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
@@ -446,19 +447,17 @@ box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 display: flex;
 justify-content: space-between;
 align-items: center;
-width: 100%;
-height: 100%; /* Take full header height */
-padding: 0 20px;
 }
 
-/* 3D Button Effect for Logo - ADJUSTED FOR FIXED HEIGHT */
+/* 3D Button Effect for Logo - MADE SMALLER */
 .logo {
-font-size: 1.4rem;
+font-size: 1.4rem; /* Reduced from 1.6rem */
 font-weight: 700;
 color: var(--header-text);
 font-family: 'Noto Kufi Arabic', serif;
 letter-spacing: 1px;
-padding: 8px 16px; /* Consistent padding */
+margin: 0;
+padding: 6px 12px; /* Reduced from 8px 16px */
 text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 transition: all 0.3s ease;
 background: linear-gradient(145deg, var(--accent), var(--accent-dark));
@@ -471,7 +470,6 @@ position: relative;
 transform-style: preserve-3d;
 display: inline-block;
 cursor: pointer;
-height: fit-content; /* Adjust to content */
 }
 
 .logo:hover {
@@ -508,15 +506,11 @@ nav ul {
 display: flex;
 list-style: none;
 align-items: center;
-height: 100%; /* Take full header height */
 }
 
 /* 3D Button Effect for Menu Items */
 nav ul li {
 margin-left: 30px;
-height: 100%; /* Take full header height */
-display: flex;
-align-items: center; /* Vertically center links */
 }
 
 nav ul li a {
@@ -592,7 +586,6 @@ height: 18px;
 cursor: pointer;
 z-index: 1100;
 transition: all 0.3s ease;
-flex-shrink: 0; /* Prevent shrinking */
 }
 
 .mobile-toggle:hover {
@@ -616,7 +609,7 @@ align-items: center;
 justify-content: center;
 position: relative;
 overflow: hidden;
-margin-top: 60px; /* Fixed header height */
+margin-top: 0;
 border-radius: 20px;
 text-align: center;
 }
@@ -627,7 +620,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: linear-gradient(rgba(26, 26, 26, 0.4), rgba(44, 44, 44, 0.6)), url('https://plus.unsplash.com/premium_photo-1671420510141-aec7a14b59e5?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -638,14 +631,14 @@ transform: translateZ(0);
 will-change: transform;
 }
 
-/* Golden Mirror Shade Effect */
+/* New Color Shade Effect */
 .hero-golden-shade {
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0) 70%);
+background: radial-gradient(ellipse at center, rgba(140, 217, 216, 0.15) 0%, rgba(140, 217, 216, 0) 70%); /* Updated with new color */
 pointer-events: none;
 z-index: 0;
 mix-blend-mode: overlay;
@@ -653,7 +646,7 @@ opacity: 0.8;
 border-radius: 20px;
 }
 
-/* Add a subtle animation to the golden shade */
+/* Add a subtle animation to the new color shade */
 @keyframes goldenShimmer {
 0% { opacity: 0.6; }
 50% { opacity: 0.9; }
@@ -664,7 +657,7 @@ border-radius: 20px;
 animation: goldenShimmer 8s infinite ease-in-out;
 }
 
-/* Ensure hero content stays above the golden shade */
+/* Ensure hero content stays above the new color shade */
 .hero-content {
 position: relative;
 z-index: 1;
@@ -706,7 +699,7 @@ border-radius: 50%;
 border: 4px solid var(--accent);
 object-fit: cover;
 box-shadow: 
-0 0 20px rgba(212, 175, 55, 0.8),
+0 0 20px rgba(140, 217, 216, 0.8), /* Updated with new color */
 0 8px 16px rgba(0, 0, 0, 0.3),
 0 0 0 3px rgba(255, 255, 255, 0.1) inset;
 transition: all 0.5s ease;
@@ -716,7 +709,7 @@ z-index: 2;
 
 .profile-photo-container:hover .profile-photo {
 box-shadow: 
-0 0 30px rgba(212, 175, 55, 1),
+0 0 30px rgba(140, 217, 216, 1), /* Updated with new color */
 0 12px 24px rgba(0, 0, 0, 0.4),
 0 0 0 5px rgba(255, 255, 255, 0.2) inset;
 transform: scale(1.05);
@@ -747,7 +740,7 @@ height: 12px;
 background-color: var(--accent);
 border-radius: 50%;
 box-shadow: 
-0 0 8px rgba(212, 175, 55, 0.8),
+0 0 8px rgba(140, 217, 216, 0.8), /* Updated with new color */
 0 2px 4px rgba(0, 0, 0, 0.3);
 border: 2px solid white;
 }
@@ -765,10 +758,10 @@ left: -10px;
 right: -10px;
 bottom: -10px;
 border-radius: 50%;
-border: 2px solid rgba(212, 175, 55, 0.5);
+border: 2px solid rgba(140, 217, 216, 0.5); /* Updated with new color */
 box-shadow: 
-0 0 15px rgba(212, 175, 55, 0.5),
-inset 0 0 15px rgba(212, 175, 55, 0.2);
+0 0 15px rgba(140, 217, 216, 0.5), /* Updated with new color */
+inset 0 0 15px rgba(140, 217, 216, 0.2); /* Updated with new color */
 z-index: 1;
 }
 
@@ -777,10 +770,10 @@ z-index: 1;
 position: absolute;
 width: 8px;
 height: 8px;
-background-color: rgba(212, 175, 55, 0.7);
+background-color: rgba(140, 217, 216, 0.7); /* Updated with new color */
 border-radius: 50%;
 z-index: 0;
-box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+box-shadow: 0 0 8px rgba(140, 217, 216, 0.8); /* Updated with new color */
 }
 
 .particle-1 {
@@ -815,7 +808,7 @@ animation: floatParticle 11s infinite ease-in-out 3s;
 .hero h1 {
 font-size: 3.5rem;
 margin-bottom: 15px;
-color: var(--text-light);
+color: var(--github-black);
 letter-spacing: 1px;
 position: relative;
 display: inline-block;
@@ -836,7 +829,7 @@ border-radius: 3px;
 }
 
 .hero h1 span {
-color: var(--accent);
+color: #6bb7b6;
 }
 
 .typewriter {
@@ -855,7 +848,7 @@ from, to { border-color: var(--accent) }
 
 .hero p {
 font-size: 1.3rem;
-color: var(--accent-light);
+color: var(--accent-dark);
 margin-bottom: 25px;
 font-weight: 300;
 max-width: 700px;
@@ -871,7 +864,7 @@ text-align: center;
 display: inline-block;
 padding: 10px 20px;
 background: linear-gradient(145deg, var(--accent), var(--accent-dark));
-color: var(--text-light);
+color: #ffffff;
 font-weight: 600;
 text-decoration: none;
 border-radius: 50px;
@@ -926,6 +919,17 @@ background-color: rgba(255, 255, 255, 0.3);
 border-radius: 50px;
 z-index: 1;
 animation: whiteEffect 0.5s ease-out;
+}
+
+/* Animated Background Canvas */
+#animated-bg {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.7;
 }
 
 /* Enhanced Section Styles */
@@ -1095,7 +1099,7 @@ margin-top: 12px;
 }
 
 .experience-card .exp-content .exp-tags span {
-background-color: rgba(212, 175, 55, 0.2);
+background-color: rgba(140, 217, 216, 0.2); /* Updated with new color */
 color: var(--accent-light);
 padding: 3px 8px;
 border-radius: 12px;
@@ -1104,7 +1108,7 @@ transition: all 0.3s ease;
 }
 
 .experience-card .exp-content .exp-tags span:hover {
-background-color: rgba(212, 175, 55, 0.3);
+background-color: rgba(140, 217, 216, 0.3); /* Updated with new color */
 transform: translateY(-2px);
 }
 
@@ -1588,7 +1592,7 @@ font-size: 2.2rem;
 color: var(--accent);
 font-family: 'Noto Kufi Arabic', serif;
 margin-bottom: 20px;
-text-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+text-shadow: 0 2px 8px rgba(140, 217, 216, 0.3); /* Updated with new color */
 }
 
 /* Enhanced Contact Section in Footer */
@@ -1613,7 +1617,7 @@ top: -40px;
 right: -40px;
 width: 80px;
 height: 80px;
-background: radial-gradient(circle, var(--accent) 0%, rgba(212, 175, 55, 0.1) 70%);
+background: radial-gradient(circle, var(--accent) 0%, rgba(140, 217, 216, 0.1) 70%); /* Updated with new color */
 border-radius: 50%;
 }
 
@@ -1680,7 +1684,7 @@ transform: scaleX(1);
 
 .contact-detail-item:hover {
 transform: translateY(-12px) rotateX(5deg);
-background-color: rgba(212, 175, 55, 0.1);
+background-color: rgba(140, 217, 216, 0.1); /* Updated with new color */
 box-shadow: 0 15px 30px var(--shadow-color);
 }
 
@@ -1693,14 +1697,14 @@ align-items: center;
 justify-content: center;
 margin-bottom: 12px;
 overflow: hidden;
-background: linear-gradient(145deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.2));
+background: linear-gradient(145deg, rgba(140, 217, 216, 0.1), rgba(140, 217, 216, 0.2)); /* Updated with new color */
 border: 2px solid var(--accent);
 transition: all 0.4s ease;
 }
 
 .contact-detail-item:hover .icon {
 transform: rotate(15deg) scale(1.1);
-box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+box-shadow: 0 0 12px rgba(140, 217, 216, 0.4); /* Updated with new color */
 }
 
 .contact-detail-item .icon img {
@@ -1764,7 +1768,7 @@ top: -30px;
 right: -30px;
 width: 70px;
 height: 70px;
-background: radial-gradient(circle, var(--accent) 0%, rgba(212, 175, 55, 0.1) 70%);
+background: radial-gradient(circle, var(--accent) 0%, rgba(140, 217, 216, 0.1) 70%); /* Updated with new color */
 border-radius: 50%;
 }
 
@@ -1819,7 +1823,7 @@ transition: all 0.3s ease;
 
 .newsletter-input input:focus {
 border-color: var(--accent);
-box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+box-shadow: 0 0 12px rgba(140, 217, 216, 0.2); /* Updated with new color */
 }
 
 /* 3D Button Effect for Newsletter Button */
@@ -1889,7 +1893,7 @@ align-items: center;
 justify-content: center;
 width: 45px;
 height: 45px;
-background: linear-gradient(145deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+background: linear-gradient(145deg, rgba(140, 217, 216, 0.2), rgba(140, 217, 216, 0.1)); /* Updated with new color */
 color: var(--text-primary);
 border-radius: 50%;
 transition: all 0.4s ease;
@@ -1897,7 +1901,7 @@ font-size: 1.1rem;
 position: relative;
 overflow: hidden;
 box-shadow:
-0 4px 0 rgba(212, 175, 55, 0.3),
+0 4px 0 rgba(140, 217, 216, 0.3), /* Updated with new color */
 0 6px 8px rgba(0, 0, 0, 0.15),
 0 2px 0 rgba(255, 255, 255, 0.2) inset;
 transform-style: preserve-3d;
@@ -1906,7 +1910,7 @@ transform-style: preserve-3d;
 .social-links a:hover {
 transform: translateY(2px);
 box-shadow:
-0 2px 0 rgba(212, 175, 55, 0.3),
+0 2px 0 rgba(140, 217, 216, 0.3), /* Updated with new color */
 0 4px 6px rgba(0, 0, 0, 0.15),
 0 1px 0 rgba(255, 255, 255, 0.2) inset;
 color: var(--bg-primary);
@@ -1915,7 +1919,7 @@ color: var(--bg-primary);
 .social-links a:active {
 transform: translateY(4px);
 box-shadow:
-0 0 0 rgba(212, 175, 55, 0.3),
+0 0 0 rgba(140, 217, 216, 0.3), /* Updated with new color */
 0 2px 4px rgba(0, 0, 0, 0.15),
 0 0 0 rgba(255, 255, 255, 0.2) inset;
 }
@@ -1955,7 +1959,7 @@ background: var(--instagram-gradient);
 display: inline-block;
 padding: 10px 20px;
 background: linear-gradient(145deg, var(--accent), var(--accent-dark));
-color: var(--text-light);
+color: #ffffff;
 font-weight: 600;
 text-decoration: none;
 border-radius: 50px;
@@ -2003,6 +2007,12 @@ background-color: rgba(255, 255, 255, 0.3);
 border-radius: 50px;
 z-index: 1;
 animation: whiteEffect 0.5s ease-out;
+}
+
+/* Cloudflare Badge */
+.cloudflare-badge {
+margin: 20px 0;
+display: inline-block;
 }
 
 /* Back to Top Button */
@@ -2274,7 +2284,7 @@ font-size: 0.9rem;
 
 .chatbot-input input:focus {
 border-color: var(--accent);
-box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+box-shadow: 0 0 10px rgba(140, 217, 216, 0.2); /* Updated with new color */
 }
 
 .chatbot-input button {
@@ -2720,35 +2730,6 @@ padding: 0 60px;
 }
 
 @media (max-width: 992px) {
-/* Adjust header container for smaller screens */
-.header-container {
-padding: 0 15px;
-}
-
-/* Adjust logo size */
-.logo {
-font-size: 1.2rem;
-padding: 6px 12px;
-}
-
-/* Adjust theme toggle size */
-.theme-toggle {
-width: 60px;
-height: 30px;
-}
-
-.theme-toggle-indicator {
-width: 24px;
-height: 24px;
-top: 3px;
-left: 3px;
-}
-
-body.dark-theme .theme-toggle-indicator {
-left: 33px;
-}
-
-/* Adjust mobile toggle button */
 .mobile-toggle {
 display: flex;
 order: 1;
@@ -2768,10 +2749,10 @@ margin-right: 0;
 
 nav ul {
 position: fixed;
-top: 60px; /* Fixed header height */
+top: 0;
 left: -320px;
 width: 280px;
-height: calc(100vh - 60px); /* Account for fixed header */
+height: 100vh;
 background: linear-gradient(145deg, var(--accent), var(--accent-dark));
 flex-direction: column;
 justify-content: center;
@@ -2791,7 +2772,6 @@ display: flex;
 nav ul li {
 margin: 18px 0;
 width: 80%;
-height: auto; /* Reset height for mobile menu */
 }
 
 /* 3D Button Effect for Mobile Menu Items */
@@ -2845,6 +2825,10 @@ background-color: rgba(255, 255, 255, 0.3);
 border-radius: 30px;
 z-index: 1;
 animation: whiteEffect 0.5s ease-out;
+}
+
+.hero {
+margin-top: 0;
 }
 
 .hero h1 {
@@ -2986,13 +2970,17 @@ padding: 0 15px;
 }
 
 /* Header adjustments for small screens */
-.header-container {
-padding: 0 10px;
+header {
+padding: 3px 0;
+}
+
+header.scrolled {
+padding: 1px 0;
 }
 
 .logo {
-font-size: 1.1rem;
-padding: 5px 10px;
+font-size: 1.2rem; /* Reduced from 1.4rem */
+padding: 5px 10px; /* Reduced from 6px 12px */
 }
 
 /* Theme switcher adjustments for mobile */
@@ -3001,22 +2989,26 @@ margin-left: 10px;
 }
 
 .theme-toggle {
-width: 50px;
-height: 25px;
+width: 60px;
+height: 30px;
 }
 
 .theme-toggle-indicator {
-width: 20px;
-height: 20px;
-top: 2.5px;
-left: 2.5px;
+width: 24px;
+height: 24px;
+top: 3px;
+left: 3px;
 }
 
 body.dark-theme .theme-toggle-indicator {
-left: 27.5px;
+left: 33px;
 }
 
 /* Hero section adjustments */
+.hero {
+margin-top: 0;
+}
+
 .hero h1 {
 font-size: 1.8rem;
 margin-bottom: 12px;
@@ -3390,6 +3382,9 @@ background-color: #FFFFFF; /* White color for mobile toggle lines in dark theme 
 </style>
 </head>
 <body>
+<!-- Animated Background Canvas -->
+<canvas id="animated-bg"></canvas>
+
 <!-- Enhanced Preloader -->
 <div class="preloader" id="preloader">
 <div class="preloader-wrapper">
@@ -3398,8 +3393,8 @@ background-color: #FFFFFF; /* White color for mobile toggle lines in dark theme 
 <div class="progress-overlay">
 <div class="progress-container">
 <svg class="progress-circle" viewBox="0 0 120 120" width="100%" height="100%">
-<circle class="progress-background" cx="60" cy="60" r="54" fill="none" stroke="rgba(212, 175, 55, 0.3)" stroke-width="4"/>
-<circle class="progress-bar" cx="60" cy="60" r="54" fill="none" stroke="#D4AF37" stroke-width="4"
+<circle class="progress-background" cx="60" cy="60" r="54" fill="none" stroke="rgba(140, 217, 216, 0.3)" stroke-width="4"/>
+<circle class="progress-bar" cx="60" cy="60" r="54" fill="none" stroke="#8cd9d8" stroke-width="4"
 stroke-dasharray="339.292" stroke-dashoffset="339.292" stroke-linecap="round"/>
 </svg>
 <div class="progress-text" id="progressText">0%</div>
@@ -3444,7 +3439,7 @@ stroke-dasharray="339.292" stroke-dashoffset="339.292" stroke-linecap="round"/>
 <!-- Enhanced Hero Section -->
 <section class="hero" id="home">
 <div class="hero-bg"></div>
-<!-- Add this new div for the golden shade -->
+<!-- Add this new div for the new color shade -->
 <div class="hero-golden-shade"></div>
 <div class="container">
 <div class="hero-content">
@@ -3845,6 +3840,7 @@ Demonstrates knowledge of IT Service Management best practices. Equipped with sk
 </div>
 </div>
 
+ 
 
 <!-- Enhanced Copyright Button -->
 <button class="copyright-btn"> Mohammad Ashraf. All Rights Reserved. &copy; 2025-2026</button>
@@ -3896,6 +3892,112 @@ Demonstrates knowledge of IT Service Management best practices. Equipped with sk
 </div>
 
 <script>
+// Animated Background Script
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('animated-bg');
+    const ctx = canvas.getContext('2d');
+    
+    // Set canvas size
+    function setCanvasSize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    
+    setCanvasSize();
+    window.addEventListener('resize', setCanvasSize);
+    
+    // Sphere class
+    class Sphere {
+        constructor() {
+            this.radius = Math.random() * 30 + 10; // Between 10 and 40
+            this.x = Math.random() * (canvas.width - this.radius * 2) + this.radius;
+            this.y = Math.random() * (canvas.height - this.radius * 2) + this.radius;
+            this.dx = (Math.random() - 0.5) * 0.5; // Slow movement
+            this.dy = (Math.random() - 0.5) * 0.5;
+            this.color = this.getRandomColor();
+            this.opacity = Math.random() * 0.5 + 0.3; // Between 0.3 and 0.8
+        }
+        
+        getRandomColor() {
+            // Colors similar to the reference image
+            const colors = [
+                'rgba(255, 255, 255, ', // White
+                'rgba(173, 216, 230, ', // Light blue
+                'rgba(135, 206, 250, ', // Sky blue
+                'rgba(100, 149, 237, ', // Cornflower blue
+                'rgba(70, 130, 180, '   // Steel blue
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            
+            // Create radial gradient for 3D effect
+            const gradient = ctx.createRadialGradient(
+                this.x - this.radius/3, this.y - this.radius/3, 1,
+                this.x, this.y, this.radius
+            );
+            gradient.addColorStop(0, 'rgba(255, 255, 255, ' + this.opacity + ')');
+            gradient.addColorStop(0.5, this.color + (this.opacity * 0.8) + ')');
+            gradient.addColorStop(1, this.color + (this.opacity * 0.4) + ')');
+            
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            ctx.closePath();
+        }
+        
+        update() {
+            // Bounce off edges
+            if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+                this.dx = -this.dx;
+            }
+            if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+                this.dy = -this.dy;
+            }
+            
+            this.x += this.dx;
+            this.y += this.dy;
+            
+            this.draw();
+        }
+    }
+    
+    // Create spheres
+    const spheres = [];
+    const numberOfSpheres = Math.floor((canvas.width * canvas.height) / 15000); // Adjust density
+    
+    for (let i = 0; i < numberOfSpheres; i++) {
+        spheres.push(new Sphere());
+    }
+    
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+        
+        // Clear canvas with a light blue background
+        ctx.fillStyle = 'rgba(226, 240, 255, 0.2)'; // Very light blue with transparency
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Update and draw spheres
+        spheres.forEach(sphere => {
+            sphere.update();
+        });
+    }
+    
+    animate();
+    
+    // Handle theme changes
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', function() {
+        // Update sphere colors when theme changes
+        spheres.forEach(sphere => {
+            sphere.color = sphere.getRandomColor();
+        });
+    });
+});
+
 // Fixed Preloader with circular progress indicator
 document.addEventListener('DOMContentLoaded', function() {
 const preloader = document.getElementById('preloader');
@@ -4016,7 +4118,7 @@ e.preventDefault();
 const target = document.querySelector(this.getAttribute('href'));
 if (target) {
 window.scrollTo({
-top: target.offsetTop - 60, /* Fixed header height */
+top: target.offsetTop - 80,
 behavior: 'smooth'
 });
 }
@@ -4118,16 +4220,30 @@ const heroBg = document.querySelector('.hero-bg');
 heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
 });
 
-// Set hero margin-top based on fixed header height
-function setHeroMargin() {
+// Set hero padding-top based on header height
+function setHeroPadding() {
+const header = document.getElementById('header');
 const hero = document.querySelector('.hero');
-if (hero) {
-hero.style.marginTop = '60px'; /* Fixed header height */
+if (header && hero) {
+const headerHeight = header.offsetHeight;
+hero.style.paddingTop = `${headerHeight}px`;
 }
 }
 
-window.addEventListener('load', setHeroMargin);
-window.addEventListener('resize', setHeroMargin);
+window.addEventListener('load', setHeroPadding);
+window.addEventListener('resize', setHeroPadding);
+
+// Update hero padding when header class changes (scrolled)
+const headerElement = document.getElementById('header');
+const headerObserver = new MutationObserver(function(mutations) {
+mutations.forEach(function(mutation) {
+if (mutation.attributeName === 'class') {
+setHeroPadding();
+}
+});
+});
+
+headerObserver.observe(headerElement, { attributes: true });
 
 // Enhanced Chatbot functionality with comprehensive knowledge base
 document.addEventListener('DOMContentLoaded', function() {
