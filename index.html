@@ -3009,7 +3009,7 @@
         }
     </style>
 </head>
-<body>
+<body class="dark-theme">
     <!-- Enhanced Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-wrapper">
@@ -3051,7 +3051,7 @@
                         <div class="theme-switcher">
                             <div class="theme-toggle" id="themeToggle">
                                 <div class="theme-toggle-indicator">
-                                    <i class="fas fa-sun"></i>
+                                    <i class="fas fa-moon"></i>
                                 </div>
                             </div>
                         </div>
@@ -3512,17 +3512,20 @@ Wireless Security: Audit enterprise Wi-Fi protocols to defeat rogue access point
             const themeToggle = document.getElementById('themeToggle');
             const themeIndicator = document.querySelector('.theme-toggle-indicator i');
             
-            // Set default theme to white honeycomb
-            localStorage.setItem('theme', 'white');
+            // Default theme is now 'black' (dark theme).
+            // Only set the default if the user has never chosen a theme.
+            if (!localStorage.getItem('theme')) {
+                localStorage.setItem('theme', 'black');
+            }
             
-            // Check for saved theme preference or default to white
-            const currentTheme = localStorage.getItem('theme') || 'white';
-            if (currentTheme === 'black') {
-                document.body.classList.add('dark-theme');
-                themeIndicator.className = 'fas fa-moon';
-            } else {
+            // Check for saved theme preference or default to black (dark)
+            const currentTheme = localStorage.getItem('theme') || 'black';
+            if (currentTheme === 'white') {
                 document.body.classList.remove('dark-theme');
                 themeIndicator.className = 'fas fa-sun';
+            } else {
+                document.body.classList.add('dark-theme');
+                themeIndicator.className = 'fas fa-moon';
             }
             
             // Theme toggle click event
